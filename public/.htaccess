@@ -1,0 +1,8 @@
+# Activation de la réécriture d'URL
+RewriteEngine on
+#--------------------------------------------------
+# Règles de réécriture d'URL :
+#--------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ ./index.php?url=$1 [QSA,L]
